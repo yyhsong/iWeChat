@@ -93,4 +93,5 @@ class WechatObj {
 			exit;
 		}
 	}
+
 }
