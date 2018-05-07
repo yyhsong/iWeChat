@@ -3,7 +3,7 @@
 
 - index01.php 回复特定的文本消息
 - index02.php 接收普通消息：text、image、voice、video、location、link
-- index03.php 发送被动回复消息：text、image、voice、video、music、news
+- index03.php 被动回复消息：text、image、voice、video、music、news
 - index04.php 处理事件消息：关注、取消关注
 - index05.php 获取access_token
 - index06.php 自定义菜单
