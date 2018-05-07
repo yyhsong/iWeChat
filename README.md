@@ -1,5 +1,5 @@
 # iWechat
-**基于PHP的微信开发学习** 
+**基于PHP的微信公众号开发练习** 
 
 - index01.php 回复特定的文本消息
 - index02.php 接收普通消息：text、image、voice、video、location、link
