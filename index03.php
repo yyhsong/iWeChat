@@ -203,4 +203,5 @@ class WechatObj {
 		$result = sprintf($msgTpl, $fromUserName, $toUserName, $createTime);
 		echo $result;
 	}
+	
 }
