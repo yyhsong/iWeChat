@@ -81,7 +81,7 @@ class WechatObj {
 	public function getOAuthToken($code) {
 		$url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=".$this->_appId."&secret=".$this->_appSecret."&code=".$code."&grant_type=authorization_code";
 		$res = $this->requestHttp($url);
-		return $res;	
+		return $res;
 	}
 	
 	//获取用户基本信息（使用OAuth2授权的access_token获取未关注用户，access_token为临时获取）
