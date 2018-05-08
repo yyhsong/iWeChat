@@ -10,7 +10,7 @@
     	<div class="weui-form-preview">
 		    <div class="weui-form-preview__ft">
 		    	<a class="weui-form-preview__btn weui-form-preview__btn_primary" 
-		        	href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5646810d81f8a7f1&redirect_uri=http://wx.prajnax.cn/snsapi_userinfo.php&response_type=code&scope=snsapi_userinfo&state=2#wechat_redirect">获取授权snsapi_userinfo</a>
+		        	href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5645810d81e8a7f1&redirect_uri=http://www.abc.com/snsapi_userinfo.php&response_type=code&scope=snsapi_userinfo&state=2#wechat_redirect">获取授权snsapi_userinfo</a>
 		    </div>
 		</div>
     </body>
