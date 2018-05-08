@@ -13,7 +13,7 @@
 - index10.php 获取用户Tags
 - index11.php 获取某一用户的Tag列表
 - index12.php 获取用户列表
-- index13.php 获取用户基本信息
+- index13.php 根据openid获取用户基本信息
 - index14.php OAuth2网页授权
 - index15.php 微信JSSDK基本使用
 - index16.php 微信JSSDK - 分享到朋友圈
