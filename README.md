@@ -14,9 +14,10 @@
 - index11.php 获取某一用户的Tag列表
 - index12.php 获取用户列表
 - index13.php 根据openid获取用户基本信息
-- index14.php OAuth2网页授权
-- index15.php 微信JSSDK基本使用
-- index16.php 微信JSSDK - 分享到朋友圈
-- index17.php 微信JSSDK - 获取地理位置信息
-- index18.php 获取模板消息列表
-- index19.php 发送模板消息
+- index14.php 微信网页授权snsapi_base
+- index15.php 微信网页授权snsapi_userinfo
+- index16.php 微信JSSDK基本使用
+- index17.php 微信JSSDK - 分享到朋友圈
+- index18.php 微信JSSDK - 获取地理位置信息
+- index19.php 获取模板消息列表
+- index20.php 发送模板消息
