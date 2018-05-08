@@ -2,8 +2,8 @@
 
 class WechatObj {	
 	//测试号
-	private $_appId = 'wx5646810d81f8a7f1';
-	private $_appSecret = '1bbaf7e0eddc5a779186b50fdcd88421';
+	private $_appId = 'wx5646610d82f8a7a1';
+	private $_appSecret = '1bbafoe0edcc5a779176b50fdcb88421';
 	
 	//构造函数，获取access_token
 	public function __construct($_appId = NULL, $_appSecret = NULL) {
