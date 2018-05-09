@@ -1,6 +1,7 @@
 <?php
 require_once 'utils/WechatObj.php';
 $wechatObj = new WechatObj();
+//获取签名包 - 只能在服务器端进行
 $signPackage = $wechatObj->getSignPackage();
 ?>
 
@@ -37,6 +38,7 @@ $signPackage = $wechatObj->getSignPackage();
 				wx.getLocation({
 					type: 'gcj02', //默认wgs84，openLocation使用gcj02
 					success: function(res) {
+						
 						var lng = res.longitude; //经度
 						var lat = res.latitude; //纬度
 						var speed = res.speed; //速度，米/秒
