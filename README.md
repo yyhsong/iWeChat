@@ -21,3 +21,5 @@
 - index18.php 微信JSSDK - 获取地理位置信息
 - index19.php 获取模板消息列表
 - index20.php 发送模板消息
+- index21.php 生成带参数的二维码
+- index22.php 扫描带参数的二维码
