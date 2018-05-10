@@ -2,8 +2,8 @@
 
 class WechatObj {	
 	//测试号
-	private $_appId = 'wx5646610d82f8a7a1';
-	private $_appSecret = '1bbafoe0edcc5a779176b50fdcb88421';
+	private $_appId = 'wx5646610c81f8b7f31';
+	private $_appSecret = '1bbac7e0fdbc5a77i186c50fdce88421';
 	
 	//构造函数，获取access_token
 	public function __construct($_appId = NULL, $_appSecret = NULL) {
@@ -50,7 +50,7 @@ class WechatObj {
 		$this->jsapi_ticket = $result['jsapi_ticket'];
 		$this->jsapi_expire = $result['jsapi_expire'];
 		
-		if(time() > ($this->jsapi_expire + 6400)) {
+		if(time() > ($this->jsapi_expire + 3600)) {
 			$url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&access_token=".$this->access_token;
 			$result = $this->requestHttp($url);
 			$this->jsapi_ticket = $result['ticket'];
@@ -123,6 +123,13 @@ class WechatObj {
 		return $resp;
 	}
 	
+	//生成带参数的二维码
+	public function getQrcode($data) {
+		$url = 'https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token='.$this->access_token;
+		$resp = $this->requestHttp($url, $data);
+		return $resp;
+	}
+	
 	//封装HTTP请求
 	public function requestHttp($url, $data = NULL) {
 		$curl = curl_init();
@@ -138,5 +145,19 @@ class WechatObj {
 	    curl_close($curl);
 		$result = json_decode($output, true);
 		return $result;
+	}
+	
+	//下载文件
+	public function downloadFile($fileUrl) {
+		$ch = curl_init($fileUrl);
+		curl_setopt($ch, CURLOPT_HEADER, 0);
+		curl_setopt($ch, CURLOPT_NOBODY, 0); //只取body头
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$package = curl_exec($ch);
+		$httpinfo = curl_getinfo($ch);
+		curl_close($ch);
+		return array_merge(array('body' =>$package), array('header' =>$httpinfo));
 	}
 }
