@@ -42,8 +42,8 @@
 	
 5、微信内网页调起支付：在微信浏览器里打开网页执行JS调起支付，接口输入输出数据格式为JSON。
    WeixinJSBridge.getBrandWCPayRequest()
-   
-          参数：
+
+	参数：
     - appId 公众号appId
     - timeStamp 当前时间戳
     - nonceStr 随机字符串，不长于32位
@@ -52,7 +52,7 @@
     - paySign 签名
     - ... 参与签名的参数为：appId、timeStamp、nonceStr、package、signTpe，区分大小写
     
-          返回：
+	返回：
     - get_brand_wcpay_request:ok 支付成功
     - get_brand_wcpay_request:cancel 支付过程中用户取消
     - get_brand_wxpay_request:fail 支付失败
@@ -60,7 +60,7 @@
     
 6、用户支付成功并点击完成按钮后
 
-	前端：getBrandWCPayRequest()的回调函数会收到关于支付成功的返回值，可根据该结果跳转到相应的页面进行展示。
-	后台：统一下单接口中定义的notify_url，收到来自微信平台的支付成功回调通知，标志该笔订单支付成功。
-	以上两步为异步进行，触发不保证遵循严格的时序，JS API返回值作为触发商户网页跳转的标志，
+	- 前端：getBrandWCPayRequest()的回调函数会收到关于支付成功的返回值，可根据该结果跳转到相应的页面进行展示。
+	- 后台：统一下单接口中定义的notify_url，收到来自微信平台的支付成功回调通知，标志该笔订单支付成功。
+	- 以上两步为异步进行，触发不保证遵循严格的时序，JS API返回值作为触发商户网页跳转的标志，
 	但商户后台应该只在收到微信后台的支付成功通知后，才做真正的支付成功处理。
