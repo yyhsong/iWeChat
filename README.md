@@ -23,3 +23,4 @@
 - index20.php 发送模板消息
 - index21.php 生成带参数的二维码
 - index22.php 扫描带参数的二维码
+- wxpay 微信支付 - 公众号支付
