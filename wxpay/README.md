@@ -7,6 +7,7 @@
 3、使用网页授权获取用户openid;
 
 4、调用统一下单接口：https://api.mch.weixin.qq.com/pay/unifiedorder;
+
 	参数：
 	- appid 公众号appId
 	- mch_id 商户号
@@ -41,6 +42,7 @@
 	
 5、微信内网页调起支付：在微信浏览器里打开网页执行JS调起支付，接口输入输出数据格式为JSON。
    WeixinJSBridge.getBrandWCPayRequest()
+   
           参数：
     - appId 公众号appId
     - timeStamp 当前时间戳
@@ -57,6 +59,7 @@
     - 调用支付JSAPI缺少参数：total_fee 检查预支付会话标识prepay_id是否已失效
     
 6、用户支付成功并点击完成按钮后
+
 	前端：getBrandWCPayRequest()的回调函数会收到关于支付成功的返回值，可根据该结果跳转到相应的页面进行展示。
 	后台：统一下单接口中定义的notify_url，收到来自微信平台的支付成功回调通知，标志该笔订单支付成功。
 	以上两步为异步进行，触发不保证遵循严格的时序，JS API返回值作为触发商户网页跳转的标志，
